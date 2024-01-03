@@ -29,10 +29,6 @@ export default function Form(){
     }  
   }
 
-  function onMouseOverHandler(){
-
-    this.style.backgroundColor = 'transparent';
-  }
 
   return(
     <>
@@ -43,7 +39,7 @@ export default function Form(){
     <label style={{width:"80%",padding:"5px"}} htmlFor="age">Age(Years) <br />
     <input className={styles.inputfield} onChange={onChangeHandler} type="number" id="age" name="age" step={1} />
     </label>
-    <button className={styles.addUserBtn} onMouseOver={error?onMouseOverHandler:''} onClick={addUserHandler} disabled={error?true:false}>Add User</button>
+    <button className={styles.addUserBtn} onClick={addUserHandler} disabled={error?true:false}>Add User</button>
     </div>
     {error?<Error setError={setError}/>:''}
     </>
